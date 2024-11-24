@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:app_aws_recipes/config/constants/assets.dart';
 import 'package:app_aws_recipes/config/constants/colors.dart';
-import 'package:app_aws_recipes/features/login/controllers/login_controller.dart';
+import 'package:app_aws_recipes/features/auth/controllers/login_controller.dart';
 
 class LoginPage extends GetView<LoginController> {
   const LoginPage({super.key});
@@ -94,7 +94,8 @@ class LoginPage extends GetView<LoginController> {
                                 TextField(
                                   controller: controller.email,
                                   decoration: const InputDecoration(
-                                    prefixIcon: Icon(Icons.alternate_email_rounded),
+                                    prefixIcon:
+                                        Icon(Icons.alternate_email_rounded),
                                     filled: true,
                                     fillColor: Colors.white,
                                     border: OutlineInputBorder(
@@ -155,6 +156,26 @@ class LoginPage extends GetView<LoginController> {
                                     ),
                                   ),
                                 ),
+                                const SizedBox(height: 30),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    const Text("Aún no tienes una cuenta? "),
+                                    const SizedBox(
+                                      width: 5,
+                                    ),
+                                    InkWell(
+                                      child: const Text(
+                                        "Registrate ahora",
+                                        style: TextStyle(
+                                            color: AppColors.secondaryColor),
+                                      ),
+                                      onTap: () {
+                                        Get.toNamed("/register");
+                                      },
+                                    )
+                                  ],
+                                )
                               ],
                             ),
                           ),

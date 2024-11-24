@@ -1,5 +1,5 @@
-import 'package:app_aws_recipes/features/login/data/dtos/login_dto.dart';
-import 'package:app_aws_recipes/features/login/data/providers/login_provider.dart';
+import 'package:app_aws_recipes/features/auth/data/dtos/login_dto.dart';
+import 'package:app_aws_recipes/features/auth/data/providers/login_provider.dart';
 
 class LoginRepository {
   LoginProvider loginProvider = LoginProvider();

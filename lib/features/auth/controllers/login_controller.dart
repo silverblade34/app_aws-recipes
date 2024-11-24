@@ -2,7 +2,7 @@ import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
 import 'package:app_aws_recipes/core/widgets/custom_alert.dart';
 import 'package:app_aws_recipes/core/widgets/loading_dialog.dart';
 import 'package:app_aws_recipes/core/widgets/snack_helper.dart';
-import 'package:app_aws_recipes/features/login/data/repositories/login_repository.dart';
+import 'package:app_aws_recipes/features/auth/data/repositories/login_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';

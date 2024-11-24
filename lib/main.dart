@@ -1,8 +1,8 @@
 import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
 import 'package:amplify_flutter/amplify_flutter.dart';
-import 'package:app_aws_recipes/config/amplifyconfiguration.dart';
+import 'package:app_aws_recipes/config/amplify/amplifyconfiguration.dart';
 import 'package:app_aws_recipes/config/routes/pages.dart';
-import 'package:app_aws_recipes/config/theme.dart';
+import 'package:app_aws_recipes/config/themes/theme.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
