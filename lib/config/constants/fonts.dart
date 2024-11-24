@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppFonts {
   static const String fontFamily = 'Poppins';
+  static const String fontFamilyOnest = 'Onest';
 
   static const TextStyle heading1 = TextStyle(
     fontFamily: fontFamily,
@@ -15,6 +16,13 @@ class AppFonts {
     fontSize: 24,
     fontWeight: FontWeight.bold,
     color: Colors.black,
+  );
+
+  static const TextStyle titleRegister = TextStyle(
+    fontFamily: fontFamilyOnest,
+    fontSize: 28,
+    fontWeight: FontWeight.bold,
+    color: Color.fromARGB(255, 63, 63, 63),
   );
 
   static const TextStyle titleForm = TextStyle(

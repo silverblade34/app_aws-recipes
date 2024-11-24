@@ -95,7 +95,7 @@ class LoginPage extends GetView<LoginController> {
                                   controller: controller.email,
                                   decoration: const InputDecoration(
                                     prefixIcon:
-                                        Icon(Icons.alternate_email_rounded),
+                                        Icon(Icons.email),
                                     filled: true,
                                     fillColor: Colors.white,
                                     border: OutlineInputBorder(

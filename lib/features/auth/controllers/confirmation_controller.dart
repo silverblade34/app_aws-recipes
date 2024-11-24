@@ -1,9 +1,11 @@
 import 'package:amplify_flutter/amplify_flutter.dart';
+import 'package:app_aws_recipes/core/widgets/custom_alert.dart';
+import 'package:app_aws_recipes/core/widgets/snack_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ConfirmationController extends GetxController {
-  final String email = Get.arguments.email;
+  final String email = Get.arguments["email"];
   final codeController = TextEditingController();
 
   var isLoading = false.obs;
@@ -32,6 +34,10 @@ class ConfirmationController extends GetxController {
       );
 
       if (result.isSignUpComplete) {
+        SnackHelper.showCustomAlert(
+          "Registro exitoso. Ahora puedes iniciar sesión.",
+          AlertType.SUCCESS,
+        );
         Get.offNamed('/login');
       }
     } on AuthException catch (e) {

@@ -20,7 +20,6 @@ class RegisterController extends GetxController {
     super.onClose();
   }
 
-  // Método para registrarse
   Future<void> signUp() async {
     if (!_validateForm()) return;
 
@@ -39,16 +38,20 @@ class RegisterController extends GetxController {
           userAttributes: userAttributes,
         ),
       );
-      print("--------------------");
+      print("--------------------123");
       print(result);
       if (result.isSignUpComplete) {
+        SnackHelper.showCustomAlert(
+          "Registro exitoso. Ahora puedes iniciar sesión.",
+          AlertType.SUCCESS,
+        );
+        Get.offNamed('/login');
+      } else {
         Get.offNamed('/confirmation', arguments: {
           'email': emailController.text.trim(),
         });
       }
     } on AuthException catch (e) {
-      print("--------------------");
-      print(e);
       final errorMessage = translateSignUpError(e);
       SnackHelper.showCustomAlert(
         errorMessage,

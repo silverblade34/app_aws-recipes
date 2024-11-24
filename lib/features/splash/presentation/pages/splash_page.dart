@@ -9,6 +9,7 @@ class SplashPage extends GetView<SplashController> {
  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: AnimatedBuilder(
         animation: controller.fadeAnimation,
         builder: (context, child) {
@@ -20,12 +21,10 @@ class SplashPage extends GetView<SplashController> {
                 children: [
                   // Tu logo o contenido del splash
                   Image.asset(
-                    AppAssets.splashImage, // Asegúrate de tener esta imagen
+                    AppAssets.splashImage2, // Asegúrate de tener esta imagen
                     width: 200,
                     height: 200,
                   ),
-                  const SizedBox(height: 20),
-                  const CircularProgressIndicator(),
                 ],
               ),
             ),
